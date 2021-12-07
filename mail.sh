@@ -114,9 +114,9 @@ systemctl restart dovecot
 #Installing Rainloop
 #!/bin/bash
 # Installing Remi Repo
-yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 yum -y install yum-utils
-yum-config-manager --enable remi-php74
+yum-config-manager --enable php:7.4
 yum -y update
 yum -y install php php-cli php-common php-mbstring php php-gd php-intl php-pecl-apcu php-opcache php-json php-pecl-zip php-pear php-pecl-imagick php-fpm php-pecl-redis5 php-pgsql php-common php-pdo php-xml php-lz4 php-pecl-crypto php-pecl-rar php-pecl-pq php-pecl-lzf php-cli php-pecl-apcu-bc
 # Installing Epel Rep
