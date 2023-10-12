@@ -7,7 +7,7 @@ ROUNDCUBE="1.4.12"
 MAGENX_MAIL_VER="1.8.${ROUNDCUBE//./}.0"
 
 # Extra packages
-MAIL_PACKAGES="postfix postfix-cdb postfix-mysql postfix-pcre postfix-sqlite dovecot dovecot-mysql dovecot-pigeonhole clamav-filesystem clamav-server clamav-update clamav-milter-systemd clamav-data clamav-server-systemd clamav-scanner-systemd clamav clamav-milter clamav-lib clamav-scanner"
+MAIL_PACKAGES="postfix postfix-cdb postfix-mysql postfix-pcre postfix-sqlite dovecot dovecot-mysql dovecot-pigeonhole clamav-filesystem clamav-server clamav-update clamav-milter-systemd clamav-data clamav-server-systemd clamav-scanner-systemd clamav clamav-milter clamav-lib"
 EXTRA_PACKAGES="opendkim git subversion libicu"
 MISSING_PACKAGES="postfix-utils clamav-scanner"
 
