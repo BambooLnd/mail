@@ -99,7 +99,7 @@ if [[ ${EUID} -ne 0 ]]; then
 fi
 
 # do we have CentOS 8?
-if grep "CentOS.* 8\." /etc/redhat-release  > /dev/null 2>&1; then
+if grep "Oracle.* 8\." /etc/oracle-release  > /dev/null 2>&1; then
   GREENTXT "PASS: CENTOS RELEASE 8"
   else
   echo
@@ -111,7 +111,7 @@ fi
 
 # check if x64.
 ARCH=$(uname -m)
-if [ "$ARCH" = "x86_64" ]; then
+if [ "$ARCH" = "aarch64" ]; then
   GREENTXT "PASS: YOUR ARCHITECTURE IS 64-BIT"
   else
   echo
