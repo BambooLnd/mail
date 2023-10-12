@@ -152,6 +152,39 @@ which php > /dev/null 2>&1
 echo
 echo
 
+###################################################################################
+#                                     CHECKS END                                  #
+###################################################################################
+echo
+if grep -q "yes" /opt/magenx/cfg/.terms_es >/dev/null 2>&1 ; then
+sleep 1
+      else
+        YELLOWTXT "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            echo
+        YELLOWTXT "BY INSTALLING THIS SOFTWARE AND BY USING ANY AND ALL SOFTWARE"
+        YELLOWTXT "YOU ACKNOWLEDGE AND AGREE:"
+            echo
+        YELLOWTXT "THIS SOFTWARE AND ALL SOFTWARE PROVIDED IS PROVIDED AS IS"
+        YELLOWTXT "UNSUPPORTED AND WE ARE NOT RESPONSIBLE FOR ANY DAMAGE"
+            echo
+        YELLOWTXT "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            echo
+            echo
+	echo -n "---> Do you agree to these terms?  [y/n][y]:"
+ 	read terms_agree
+        if [ "$terms_agree" == "y" ];then
+          echo
+            mkdir -p /opt/magenx/cfg
+            echo "yes" > /opt/magenx/cfg/.terms_es
+            else
+            echo "Exiting"
+           exit 1
+          echo
+        fi
+fi
+###################################################################################
+#                                  HEADER MENU START                              #
+###################################################################################
 
 showMenu () {
 printf "\033c"
